@@ -3,9 +3,11 @@
 // $p => Page
 // $dp => Datos de la Página
 // $cv => Instancia del Controller View 
+// $bd => Si necesita usar la Base de datos true, caso contrario false
 $p = "pages";
 $c = "panel";
-$cv = new ControllerView($c);
+$bd = true;
+$cv = new ControllerView($c,$bd);
 if (isset($_GET['action'])) {
 	$action = $_GET['action'];
 	if ($action == '') {
@@ -20,7 +22,11 @@ if (isset($_GET['action'])) {
 				} else {
 					$exis = $cv -> ConsulExisPage($data);
 					if ($exis) {
-						$cv -> renderDetPage($data);
+						/* Función Mostrar los detalles de la Página , 
+							Se requieren 6 datos : 
+							Siempre llevara informacion de las paginas, accion que se puede desactivar
+						*/
+						$cv -> renderDet(true,$data,false,$p,"","");
 					} else {
 						header('Location:'.HOME.'panel/'.$p);				
 					}					

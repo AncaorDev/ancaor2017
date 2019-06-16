@@ -1,4 +1,4 @@
-// Activar Botón Guardar cambios
+// Activar Botón Guardar cambios , odificar la ruta
 var urlphp = '/ancaor2017/core/php/';
 
 $(document).ready(function(){
@@ -12,6 +12,9 @@ $(document).ready(function(){
 
 $('#summernote').summernote({
   lang: 'es-ES',
+  codemirror: { // codemirror options
+    theme: 'monokai'
+  },
   callbacks: {
     onImageUpload: function(files) {
     for(var i = 0; i < files.length; i++){

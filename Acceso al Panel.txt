@@ -1,0 +1,5 @@
+Usuario: Unknown
+Pass: unknown
+
+revisar core.php
+//Nota: Se puede descencriptar la contraseña

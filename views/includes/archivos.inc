@@ -12,7 +12,7 @@
 <![endif]-->
 <!-- JS Archives -->
 <!--  jQuery All version https://developers.google.com/speed/libraries/#jquery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
+<script src="<?=DIR_LIBS?>/jquery/jquery.min.1.12.3.js"></script>
 <script src="<?=DIR_RS?>js/jquery.js"></script>
 <script src="<?=DIR_RS?>js/scroll.js" type="text/javascript"></script>
 <!-- <script src="<?=DIR_BS?>js/bootstrap.min.js"></script>	 -->

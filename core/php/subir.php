@@ -17,6 +17,7 @@ $message['is_ok'] = false;
 				}
 				//$name = $ext[];
 				$filename = $name . '.' . $ext[$extn];
+				// Modifcar la ruta
 				$destination = 'C:\\xampp\\htdocs\\ancaor2017\\resources\\images\\' . $filename;
 				$location = $_FILES["file"]["tmp_name"];
 				move_uploaded_file($location, $destination);

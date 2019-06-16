@@ -12,14 +12,14 @@ if ($tipopage == 1) {
 	$phtml = $datapage.'.phtml';
 } else if ($tipopage == 2){
 	$link = $_POST['link'];
-	$part = "http://";
-	$part = "https://";
+	$http = "http://";
+	$https = "https://";
 	$phtml = "";
-	$pos = strpos($link, $part);
-	$pos1 = strpos($link, $part);
+	$pos = strpos($link, $http);
+	$pos1 = strpos($link, $https);
 	if ($pos === false) {
 		if ($pos1 === false) {
-			$link_Pagina = $part . $link;
+			$link_Pagina = $http . $link;
 		}
 	} else {
 		$link_Pagina = $link;
