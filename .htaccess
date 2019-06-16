@@ -20,7 +20,14 @@ RewriteRule ^panel/pages/([a-zA-Z0-9-]*)/([A-Za-z0-9\ -]*)$ index.php?page=panel
 #Para obtener las acciones de panel/datos 
 RewriteRule ^panel/datos/([a-zA-Z0-9-]*)$ index.php?page=panel&subpage=datos&action=$1
 #RewriteRule ^panel/datos/agregar/([a-zA-Z0-9-]*)$  index.php?page=panel&subpage=datos&action=agregar&std=$1
-RewriteRule ^panel/datos/([a-zA-Z0-9-]*)/([A-Za-z0-9\ -]*)$ index.php?page=panel&subpage=pages&action=$1&data=$2
+RewriteRule ^panel/datos/([a-zA-Z0-9-]*)/([A-Za-z0-9-]*)$ index.php?page=panel&subpage=datos&action=$1&acts=$2
+RewriteRule ^panel/datos/([a-zA-Z0-9-]*)/([A-Za-z0-9-]*)/([a-zA-Z0-9-]*)$ index.php?page=panel&subpage=datos&action=$1&acts=$2&data=$3
+
+#Para obtener las acciones de panel/proyectos 
+RewriteRule ^panel/proyecto/([a-zA-Z0-9-]*)$ index.php?page=panel&subpage=proyecto&acts=$1
+#RewriteRule ^panel/proyecto/agregar/([a-zA-Z0-9-]*)$  index.php?page=panel&subpage=proyecto&acts=agregar&std=$1
+RewriteRule ^panel/proyecto/([a-zA-Z0-9-]*)/([A-Za-z0-9\ -]*)$ index.php?page=panel&subpage=proyecto&acts=$1&data=$2
+
 
 #Errores - cambiar plantilla por nombre de la pagina.
 ErrorDocument 404 /ancaor2017/error

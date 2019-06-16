@@ -6,7 +6,8 @@
 	$message['page'] = $_POST['nompage'];
 	$page = $_POST['nompage'];
 	$nombre_phtml = $page;
-	$path = 'C:\\xampp\\htdocs\\ancaor2017\views\\page\\data\\data-'.$nombre_phtml.'.phtml';
+	//Modificar la ruta del proyecto
+	$path = 'C:\\xampp\\htdocs\\'.DIR_CONTROLLER.'\views\\page\\data\\data-'.$nombre_phtml.'.phtml';
 	if (file_exists($path)) {
 		$message['ex'] = "existe";
 		$message['expage'] = $path;

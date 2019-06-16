@@ -1,13 +1,15 @@
 <?php 
-$datacontroller = 
+$templateController = 
 '<?php
 // $c => Carpeta
 // $p => Page
 // $dp => Datos de la Página
 // $cv => Instancia del Controller View 
-$p = "'.$nompage.'";
+// $bd => Si necesita usar la Base de datos true, caso contrario false
+$p = "'.$this -> nompage.'";
 $c = "page";
-$cv = new ControllerView($c);
+$bd = true;
+$cv = new ControllerView($c,$bd);
 if (isset($_GET["subpage"])) {
 	$data = $_GET["subpage"];
 	if ($data == "") {

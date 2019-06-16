@@ -3,12 +3,14 @@
 <!-- Custom Theme Scripts -->
 <script src="<?=DIR_RS?>panel/js/custom.min.js"></script>
 
-<script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.2/summernote.js"></script>
+<!-- include codemirror (codemirror.css, codemirror.js, xml.js, formatting.js) -->
+<link rel="stylesheet" type="text/css" href="<?=DIR_LIBS?>codemirror/codemirror.css">
+<link rel="stylesheet" type="text/css" href="<?=DIR_LIBS?>codemirror/monokai.css">
+<script type="text/javascript" src="<?=DIR_LIBS?>codemirror/codemirror.js"></script>
+<script type="text/javascript" src="<?=DIR_LIBS?>codemirror/xml.js"></script>
+<script type="text/javascript" src="<?=DIR_LIBS?>codemirror/formatting.js"></script>
 
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/codemirror.js"></script>
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/mode/xml/xml.js"></script>
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/2.36.0/formatting.js"></script>
-
+<script src="<?=DIR_LIBS?>summernote/summernote.js"></script>
 <script src="<?=DIR_LIBS?>summernote/lang/summernote-es-ES.js"></script>
 <script src="<?=DIR_LIBS?>summernote/plugin/img/summernote-image-attributes.js"></script>
 <script src="<?=HOME?>core/js/summernoteconf.js"></script>
@@ -49,5 +51,7 @@
       });
     </script>
     <!-- /validator -->
+
+
 
 

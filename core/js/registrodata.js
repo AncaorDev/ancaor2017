@@ -1,4 +1,5 @@
 console.log($('#nompage').val());
+// Modificar la ruta
 var urlphp = '/ancaor2017/core/php/';
 var urlajax = '/ancaor2017/ajax.php';
 var loading,carga,inicio,enlace, guardar;
@@ -205,8 +206,43 @@ $("#formdata").submit(function(){
 		        };
 				setTimeout(function(){ajaxdata(datos)},2000);	
 			}
-		return false;}
+	return false;}
+});
+
+
+// 
+
+$("#formproyect").submit(function(){
+	user = $("#user").val();
+	nompage = $("#nompage").val();
+	datapage = nompage.toLowerCase();
+	iduser = $("#iduser").val();
+	tipopage = $("#tipopage").val();
+	nomeditpage = $("#nomeditpage").val();
+	datos = {"nompage" : nompage, "datapage": datapage , "iduser": iduser , "tipopage": tipopage, "link": link, "action" : action, "nomeditpage" : nomeditpage};
+	
+	if ((nompage != '' || nompage != 0) && (tipopage != 0 || tipopage != '')  && (link  != '' || link != 0)) {
+		$("#progress").show();
+		// $("#progress").html("<p>Creando Controlador</p>");
+		$("#btnenviar").html(carga);
+		var elem = document.getElementById("barra-estado"); 
+		elem.style.width = '0%';
+	  	var width = 0;
+		var nuevoSet = setInterval(progress,10);
+	    function progress(){
+		    if (width == 100) {
+		        clearInterval(nuevoSet);   
+		    } else {
+		        elem.style.width = width + '%';
+		        width++;
+		    } 
+		};
+			setTimeout(function(){ajaxdata(datos)},2000);	
+		}
+	return false;}
 	});
+//
+
 });
 
 

@@ -32,11 +32,11 @@
       <li><a href="<?=URL_PANEL?>pages">Configuración</a></li>
     </ul>
     </li>
-    <li class="active-none"><a><i class="fa fa-desktop"></i> Datos  <span class="fa fa-chevron-down"></span></a>
-    <ul class="nav child_menu">
+    <li id="lidatos" class="active-none"><a><i class="fa fa-desktop"></i> Datos  <span class="fa fa-chevron-down"></span></a>
+    <ul id="uldatos" class="nav child_menu">
          <?php 
       foreach ($datos as $dato) {?>
-        <li><a href="<?=URL_PANEL?>datos/<?=strtolower($dato['nom_Dato'])?>"> <?=$dato['nom_Dato']?> </a></li>  
+        <li id="li<?=strtolower($dato['nom_Dato'])?>"><a href="<?=URL_PANEL?>datos/<?=strtolower($dato['nom_Dato'])?>"> <?=$dato['nom_Dato']?> </a></li>  
     <?php } ?> 
         <li><a href="<?=URL_PANEL?>datos">Configuración</a></li>
     </ul>

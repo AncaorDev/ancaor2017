@@ -3,9 +3,11 @@
 // $p => Page
 // $dp => Datos de la Página
 // $cv => Instancia del Controller View 
+// $bd => Si necesita usar la Base de datos true, caso contrario false
 $p = "datos";
 $c = "panel";
-
+$bd = true;
+$cv = new ControllerView($c,$bd);
 if (isset($_GET['action'])) {
 	$subpage = $_GET['action'];
 	if ($subpage == '') {

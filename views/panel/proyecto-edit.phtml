@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<?php include HTML_DIR.'includes/panel-head.inc'; ?>
+<title> Editar Proyecto <?=$detallesproyectobyId[0]['nom_Pagina']?> </title>
+</head>
+<!-- BODY -->
+<body class="nav-md">
+<div id="myModal" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="panel panel-danger">
+        <div class="panel-heading">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">Alerta</h4>
+        </div>
+      </div>
+      <div class="modal-body">
+        <h2 id="msgModal"> </h2>
+      </div>
+      <div class="modal-footer">
+        <button id="actCambios" type="button" class="btn btn-primary">Aceptar</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div> 
+<!-- div container -->
+<div class="container body">
+  <!-- main_container -->  
+  <div class="main_container">
+    <?php include HTML_DIR.'includes/panel-menu.inc'; ?>
+    <?php include HTML_DIR.'includes/panel-top-navigation.inc' ?>
+    <!-- page content -->
+    <div class="right_col" role="main">
+      <!-- Header Pages -->
+      <div class="row header-pages">   
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <!-- x panel -->
+          <div class="x_panel">
+            <div class=" row x_title">
+              <div class="col-md-8 col-xs-12">  
+              <h2 class="h2-none" style="width:100%;"><span class="glyphicon glyphicon-book"></span> Editar Proyecto <?=$detallesproyectobyId[0]['nom_Proyecto']?> </h2>
+              </div>
+              <div class="col-md-4" style="text-align:right;">
+                
+                <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+              </div>        
+            </div>
+            <!-- x content-->
+            <div class="x_content"> 
+            <div class="data-page-panel">
+              <div class="" role="tabpanel" data-example-id="togglable-tabs">
+                <ul id="tabPages" class="nav nav-tabs bar_tabs" role="tablist">
+                  <!-- data-toggle="modal" data-target="#FormPage" -->
+                  <li role="presentation" class="active">
+                    <a href="#formpage" role="tab" id="formpage-tab" data-toggle="tab" aria-expanded="false"> Detalles de la Página </a>
+                  </li>
+                </ul>
+                <div id="myTabContent" class="tab-content">
+               
+                  <div role="tabpanel" class="tab-pane fade active in" id="formpage" aria-labelledby="form-tab">
+                    <div class="col-md-9">
+                        <div id="progress" style="display:none;" class="progress progress-striped active">
+                        <div id="barra-estado" class="progress-bar" style="width: 0%"></div>
+                        </div>
+                        <div class="col-lg-12 col-xs-12" id="mensaje"></div>
+                        <?php include HTML_DIR.'includes/form-proyectoRegistrar.inc' ?>
+                    </div>                
+                  </div>              
+                </div>
+              </div>
+            </div> 
+            </div>
+            <!-- x content -->
+          </div> 
+          <!-- x panel -->
+          </div>
+        </div>
+      </div>
+      <!-- /header pages -->
+    </div>
+    <!-- /page content -->
+  </div>
+  <!-- main container -->
+</div>
+<!-- div container -->
+<!-- /main_container -->
+<?php include HTML_DIR.'includes/panel-footer-files.inc' ?>
+<script>
+  $(document).ready(function(){
+
+    $("#lidatos").addClass('active');
+    $("#uldatos").show();
+    $("#liproyecto").addClass('active');
+  });
+</script>
+<?php include HTML_DIR.'includes/panel-footer.inc' ?>
+</body>
+<!-- /BODY -->
+</html>
