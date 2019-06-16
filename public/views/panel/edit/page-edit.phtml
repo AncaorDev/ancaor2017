@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<?php include VIEWS.'includes/panel-head.inc'; ?>
+<title></title>
+</head>
+<!-- BODY -->
+
+<body class="nav-md">
+
+<!-- div container -->
+<div class="container body">
+  <!-- main_container -->  
+  <div class="main_container">
+    <?php include VIEWS.'includes/panel-menu.inc'; ?>
+    <?php include VIEWS.'includes/panel-top-navigation.inc' ?>
+    <div class="alert ui-pnotify-container alert-danger ui-pnotify-shadow" role="alert" style="min-height: 16px;"><div class="ui-pnotify-closer" aria-role="button" tabindex="0" title="Close" style="cursor: pointer; visibility: hidden;"><span class="glyphicon glyphicon-remove"></span></div><div class="ui-pnotify-sticker" aria-role="button" aria-pressed="false" tabindex="0" title="Stick" style="cursor: pointer; visibility: hidden;"><span class="glyphicon glyphicon-pause" aria-pressed="false"></span></div><div class="ui-pnotify-icon"><span class="glyphicon glyphicon-warning-sign"></span></div><h4 class="ui-pnotify-title">Oh No!</h4><div class="ui-pnotify-text" aria-role="alert">Something terrible happened.</div></div>
+    <!-- page content -->
+    <div class="right_col" role="main">
+      <!-- Header Pages -->
+      <div class="header-pages"> 
+	      <div class="col-md-12 col-sm-12 col-xs-12">
+	      <!-- <h2> <?php print_r($datos['datos']) ?> </h2> -->   
+	      <!-- x panel -->
+        <div class="x_panel">
+          <div class=" row x_title">
+              <div class="col-md-8 col-xs-12">  
+              <h2 class="h2-none" style="width:100%;"><span class="fa fa-pencil"></span> Editar Página : <?=$datos['datos'][0]['title_Page']?> </h2>
+              </div>
+              <div class="col-md-4" style="text-align:right;">
+                
+                <a class="collapse-link"><i class="fa fa-chevron-down"></i></a>
+              </div>        
+          </div>
+          <!-- x content-->
+          <div class="x_content" style="display: none"> 
+              <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12">
+                <?php include VIEWS.'panel/forms/form-page.inc.php' ?>
+              </div>
+          </div>
+          <!-- x content -->
+        </div> 
+        <!-- x panel -->
+        <!-- x panel -->
+        <div class="x_panel">
+          <div class=" row x_title">
+              <div class="col-md-8 col-xs-12">  
+              <h2 class="h2-none" style="width:100%;"><span class="fa fa-pencil-square-o"></span> Editar Contenido de la Página :<?=$datos['datos'][0]['title_Page']?> </h2>
+              </div>
+              <div class="col-md-4" style="text-align:right;">
+                <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+              </div>        
+          </div>
+          <!-- x content-->
+          <div class="x_content"> 
+              <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12">
+                <div id="summer_page">
+                           
+                </div>
+              </div>
+              <div class="col-xs-12 col-md-8 col-sm-12 col-lg-12">
+                <a href="#" class="btn btn-primary btn-lg btn-block">Publicar</a>
+              </div>
+          </div>
+          <!-- x content -->
+        </div> 
+        <!-- x panel -->
+	      </div>
+	     <div class="" style="clear: both"></div>
+      </div>
+		  <!-- /header pages -->
+    </div>
+    <!-- /page content -->
+  </div>
+  <!-- main container -->
+</div>
+<!-- div container -->
+<!-- /main_container -->
+<?php include VIEWS.'includes/panel-footer-files.inc' ?>
+<?php include VIEWS.'includes/panel-footer.inc' ?>
+</body>
+<!-- /BODY -->
+</html>

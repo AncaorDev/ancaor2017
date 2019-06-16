@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<?php include VIEWS.'includes/panel-head.inc'; ?>
+<title> Panel de Administración </title>
+</head>
+<!-- BODY -->
+<body class="nav-md">
+  <div class="container body">
+    <!--  Main-Container -->
+    <div class="main_container">
+    <?php include VIEWS.'includes/panel-menu.inc'; ?>
+    <?php include VIEWS.'includes/panel-top-navigation.inc' ?>    
+      <!-- page content -->
+      <div class="right_col" role="main">
+        <!-- top tiles -->
+        <div class="col-md-4 col-sm-4 col-xs-6 tile_stats_count">
+            
+        </div>
+        <!-- /top tiles -->
+
+        <?php renderInclude('rendimiento') ?>
+
+      </div>
+      <!-- /page content -->
+    </div>
+     <!--  /Main-Container -->
+  </div>
+<!-- /BODY -->
+<?php include VIEWS.'includes/panel-footer-files.inc' ?>
+<script type="text/javascript">
+  // based on prepared DOM, initialize echarts instance
+  var idMem = document.getElementById("memUso");
+  var porcentajeMemoria = idMem.getAttribute("data");
+  var myChart = echarts.init(document.getElementById('echart_gauge'));
+  // specify chart configuration item and data
+  var option = {
+    title: {text: 'Estado de Memoria Ram'},
+    tooltip : {formatter: "{a} <br/>{b} : {c}%"},
+    toolbox: {
+      feature: {// restore: {show:!0,title:"Actualizar"},
+                saveAsImage: {show:!0,title:"Guardar Imagen"}
+               }
+    },
+    series: [
+      {
+      name: 'Memoria',
+      type: 'gauge',
+      detail: {formatter:'{value}%'},
+      data: [{value: porcentajeMemoria, name: ''}],
+      center:["50%","50%"],
+      startAngle:230,
+      endAngle:-50,
+      min:0,
+      max:100,
+      precision:0,
+      splitNumber:10,
+      }
+    ]
+  };
+  // use configuration item and data specified to show chart
+  myChart.setOption(option);
+</script>
+<?php include VIEWS.'includes/panel-footer.inc' ?>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<?php include VIEWS.'includes/panel-head.inc'; ?>
+<title></title>
+</head>
+<!-- BODY -->
+<body class="nav-md body-panel">
+<!-- div container -->
+<div class="container body">
+  <!-- main_container -->  
+  <div class="main_container">
+    <?php include VIEWS.'includes/panel-menu.inc'; ?>
+    <?php include VIEWS.'includes/panel-top-navigation.inc' ?>
+    <!-- page content -->
+    <div class="right_col" role="main">
+        <!-- Header Pages -->
+        <div class="header-pages">   
+        <!-- page content -->
+        <div class="col-md-12">
+          <div class="col-middle">
+            <div class="text-center text-center">
+              <h1 class="error-number"><i class="fa fa-cogs" aria-hidden="true"></i> </h1>
+              <!-- fa-cogs  fa-gear  , fa-spin-->
+              <h2>Página en Construcción</h2>
+              <p> Estamos trabajando en la construcción de esta parte del Lid-Panel para una mejor experiencia, agradecemos su comprensión
+              </p>
+              <div class="mid_center">
+                <h3>Ancaor - Lykrune</h3>
+                <form>
+                 <!--  <div class="col-xs-12 form-group pull-right top_search">
+                    <div class="input-group">
+                      <input type="text" class="form-control" placeholder="Search for...">
+                      <span class="input-group-btn">
+                              <button class="btn btn-default" type="button">Go!</button>
+                          </span>
+                    </div>
+                  </div>
+                </form> -->
+              </div>
+              <?php 
+//                 function listar_archivos($carpeta){
+//     if(is_dir($carpeta)){
+//         if($dir = opendir($carpeta)){
+//             while(($archivo = readdir($dir)) !== false){
+//               if (is_dir($carpeta.'/'.$archivo)) {
+//                  echo '<li><a style="color:red" target="_blank" href="'.$carpeta.'/'.$archivo.'">'.$archivo.'</a></li>';
+//               }
+//               else  if($archivo != '.' && $archivo != '..' && $archivo != '.htaccess'){
+//                     echo '<li><a target="_blank" href="'.$carpeta.'/'.$archivo.'">'.$archivo.'</a></li>';
+//                 }
+//             }
+//             closedir($dir);
+//         }
+//     }
+// }
+// $dir = "./public/resources/images";
+// echo listar_archivos($dir);
+
+
+
+               ?>
+            </div>
+          </div>
+        </div>
+        <!-- /page content -->
+        </div>
+        <!-- /header pages -->
+    </div>
+    <!-- /page content -->      
+  </div>
+  <!-- main container -->
+</div>
+<!-- div container -->
+<!-- /main_container -->
+<?php include VIEWS.'includes/panel-footer-files.inc' ?>
+<?php include VIEWS.'includes/panel-footer.inc' ?>
+</body>
+<!-- /BODY -->
+</html>

@@ -1,0 +1,48 @@
+#cont-iconFile {
+	margin-top: 10px;
+	position: absolute;
+	z-index: 2;
+}
+
+#imgCover {
+	background-color: transparent;
+	height: 220px;
+	display: block;
+	max-width: 100%;
+	width: 100%;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	cursor: default;
+	z-index: 0;
+	/*top: -60px;*/
+}
+#imgProfile{
+	height: 220px;
+}
+.rounded {
+	-webkit-border-radius:8px;
+	-moz-border-radius:8px;
+	border-radius:8px;
+	border:solid 4px rgb(42, 63, 84);
+}
+.textUpload{
+	background-color: rgba(42, 63, 84,.7); 
+	padding: 6px;
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+	border-radius:4px;
+	color: rgb(255,255,255);
+}
+#form-proyectos > h3{
+	display: block;
+}
+
+
+#modal-image {
+	top:25%;
+}
+
+.btn-tools {
+	cursor: pointer;
+}
