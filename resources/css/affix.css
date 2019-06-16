@@ -1,0 +1,25 @@
+.affix {
+	position: relative;
+	}
+@media (min-width: 720px) {
+	.affix {
+		top: 0;
+		width: 100%;
+		height: 20px;
+		-webkit-transition: all .5s ease-in-out;
+		transition: all .5s ease-in-out;
+		z-index: 9999;
+		position: fixed;
+	}
+	.affix-top {
+	    position: static;
+	    top: -35px;
+	}
+	.navbar {
+		margin-bottom: 0px;
+	}
+	.scroll-mod {
+		width:100%;
+		position: relative;
+	}
+}

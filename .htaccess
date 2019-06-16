@@ -1,15 +1,26 @@
 #Reglas del Servidor
 RewriteEngine on
-RewriteCond %{SCRIPT_FILENAME} !-d
-RewriteCond %{SCRIPT_FILENAME} !-f
+#RewriteCond %{SCRIPT_FILENAME} !-d
+#RewriteCond %{SCRIPT_FILENAME} !-f
 #RewriteRule ^(.*)$ //index.php/$1 [L]
 
 #Para obtener la variable de la pagina al que se quiere accesar
-#RewriteRule ^([a-zA-Z0-9\ -]*)$ /index.php?page=$1 [L]
-RewriteRule ^([a-zA-Z0-9\ -]*)$ index.php?page=$1 [L]
-RewriteRule ^panel/([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*)/([A-Za-z0-9\ -]*)$ index.php?page=panel&subpage=$1&action=$2&dato=$3 [L]
-RewriteRule ^panel/([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*)$ index.php?page=panel&subpage=$1&action=$2 [L]
-RewriteRule ^panel/([a-zA-Z0-9-]*) index.php?page=panel&subpage=$1 [L]
+RewriteRule ^([a-zA-Z0-9\ -]*)$ index.php?page=$1
+
+#Para obtener la subpagina del panel
+RewriteRule ^panel/([a-zA-Z0-9-]*)$ index.php?page=panel&subpage=$1
+
+RewriteRule ^proyectos/([a-zA-Z0-9-]*)$ index.php?page=proyectos&subpage=$1
+
+#Para obtener las acciones de panel/pages 
+RewriteRule ^panel/pages/([a-zA-Z0-9-]*)$ index.php?page=panel&subpage=pages&action=$1
+#RewriteRule ^panel/pages/agregar/([a-zA-Z0-9-]*)$  index.php?page=panel&subpage=pages&action=agregar&std=$1
+RewriteRule ^panel/pages/([a-zA-Z0-9-]*)/([A-Za-z0-9\ -]*)$ index.php?page=panel&subpage=pages&action=$1&data=$2
+
+#Para obtener las acciones de panel/datos 
+RewriteRule ^panel/datos/([a-zA-Z0-9-]*)$ index.php?page=panel&subpage=datos&action=$1
+#RewriteRule ^panel/datos/agregar/([a-zA-Z0-9-]*)$  index.php?page=panel&subpage=datos&action=agregar&std=$1
+RewriteRule ^panel/datos/([a-zA-Z0-9-]*)/([A-Za-z0-9\ -]*)$ index.php?page=panel&subpage=pages&action=$1&data=$2
 
 #Errores - cambiar plantilla por nombre de la pagina.
 ErrorDocument 404 /ancaor2017/error

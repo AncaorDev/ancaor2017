@@ -1,104 +1,54 @@
 <?php 
-/**
-* 
-*/
-class Core {
-private $host;
-private $url;
-function __construct() {
-	$this -> ejecutar();
-}
-function ejecutar(){
-	date_default_timezone_set("America/Lima");
-	/* ---------------------------------------------------
-	   Requerimos los datos que leen y escriben datos para 
-	   el correcto funcionamiento del sistema.
-	--------------------------------------------------- */
-	if (file_exists('core/php/funciones/readwritejson.php')) {
-		require_once('core/php/funciones/readwritejson.php');
-	} else {
-		echo "Not found file of readwrite json";
-	}
-	/* ---------------------------------------------------
-	   Requerimos las funciones necesarias
-	--------------------------------------------------- */
-	$functions = ['redirect','escribir','renderHTML','funciones','dateTime'];
+// LIBRERIAS
+// require('vendor/autoload.php');
+$url = 'http://localhost/ancaor2017/' ; // <- Nombre de la carpeta del proyecto 
+//Conexion 
+DEFINE('HOST','localhost'); // <-- Dirección Host
+DEFINE('USER','root');  // <-- Nombre de Usuario 
+DEFINE('PASS',''); // <-- Contraseña para acceso a la Base de Datos
+DEFINE('DBNAME','ancaor2017'); // <-- Nombre de la Base de Datos
 
-	for ($i=0; $i < count($functions); $i++) { 
-		require_once('core/php/funciones/'.$functions[$i].'.php');
-	}
-	/* ---------------------------------------------------
-		   Obtenemos las variables de .dataconfig 
-	--------------------------------------------------- */
-	try {
-		$datos = leerDatos();
-	} catch (Exception $e) {
-		throw $w;
-	}
-	/* ---------------------------------------------------
-		Obtenemos el host en la cual esta el proyecto
-	--------------------------------------------------- */
-	$https = (!empty($_SERVER['HTTPS']) ? 'https' : 'http');
-	
-	if (stristr($_SERVER["HTTP_HOST"], "localhost") === false) {
-		$this -> host = $https . '://' . $_SERVER["HTTP_HOST"] .'/';
-	} else {
-		$urldata = explode('/', $_SERVER['SCRIPT_NAME']);
-		$folder = $urldata[1];
-		$this -> host = $https . '://' . $_SERVER["HTTP_HOST"] .'/' . $folder . '/' ;
-	}
-	/* ---------------------------------------------------
-		Autoregistro de los modelos
-	--------------------------------------------------- */
-	
-	spl_autoload_register( function( $NombreClase ) {
-		if (file_exists('model/'.$NombreClase . '.php')) {
-			require_once 'model/'.$NombreClase . '.php';
-		} else if (file_exists('core/php/clases/'.$NombreClase . '.php')){
-			require_once 'core/php/clases/'.$NombreClase . '.php';
-		} else {
-			echo "Not found class archive $NombreClase "." Error en core.php línea : " . __LINE__ . "</br>";
-		}
-	});
-	/* ---------------------------------------------------
-			Constantes del proyecto
-	--------------------------------------------------- */
-	DEFINE('HOST',$datos['HOST']); // <-- Dirección Host
-	DEFINE('USER',$datos['USER']);  // <-- Nombre de Usuario 
-	DEFINE('PASS',$datos['PASS']); // <-- Contraseña para acceso a la Base de Datos
-	DEFINE('DBNAME',$datos['DBNAME']); // <-- Nombre de la Base de Datos
-	DEFINE('HOME', $this -> host); // <-- URL principal
-	DEFINE('BASE', $this -> host); //  <-- Dirección Vistas
-	DEFINE('FB_ID',$datos['FB_ID']); // <-- ID FB
-	DEFINE('AUTHOR',$datos['AUTHOR']); // <-- Autor de la pagina
-	DEFINE('COPY','Ancaor &trade;'.' 2015 - '.date('Y')); //<-- Copy Right
-	DEFINE('DIR_LIBS','libs/');  // <-- Dirección de archivos HTML
-	DEFINE('C_JS','core/js/'); // JS CORE
-	DEFINE('C_PHP','core/php/'); // PHP CORE
-	DEFINE('DIR_BS','libs/bootstrap/'); // BOOTSTRAP	
-	DEFINE('DIR_RS','public/resources/'); // RESOURCES
-	DEFINE('VIEWS','public/views/'); // <-- VIEWS
-	DEFINE('IMAGE','public/resources/images/'); // <-- IMAGES
-	DEFINE('DATE',date('d-Y-m')); // Fecha Servidor 
-	DEFINE('WEBSITE','Ancaor'); // Fecha Servidor 
-	
+// CONSTANTES
+DEFINE('HOME',$url);
+DEFINE('RUTE','');
+DEFINE('HTML_DIR','views/'); // <-- Dirección de archivos HTML
+//DEFINE('TITLE','');  // <-- Titulo de pagina
+DEFINE('WEBSITE','Portafolio Ancaor'); // <-- Nombre de la web
+DEFINE('FB_ID',''); // <-- ID FB
+DEFINE('AUTHOR','Ancaor'); // <-- Autor de la pagina
+DEFINE('BASE',$url.'views'); //  <-- Dirección Vistas (....)
+DEFINE('DIR_ROOT','/'.'ancaor2017'.'/');  // <-- Direccion Root (General)
+DEFINE('COPY','Ancaor &trade;'.' 2015 - '.date('Y')); //<-- Copy Right
+DEFINE('DATE',date('d-Y-m')); // Fecha Servidor 
 
-	/* ---------------------------------------------------
-		Enviamos los datos para Javascript
-	--------------------------------------------------- */
-	$datosjs = ["URL" => $this -> url ];
-	// escribirDatos($datosjs);
-	//Extensión .html o .htm
-	DEFINE('EXT','phtml');
-	/* ---------------------------------------------------
-		Archivos necesario
-	--------------------------------------------------- */
+//Extensión .html o .htm
+DEFINE('EXT','phtml');
 
-	//URLS 
-	DEFINE('URL_PANEL',$this -> url.'panel/');
-	DEFINE('URL_OTHER',$this -> url.'other/');	
-	Session::init();
-	DEFINE('SESSION', Session::exists());
-	}
-}
-// echo __FILE__;
+//URLS 
+DEFINE('URL_PANEL',$url.'panel/');
+DEFINE('URL_OTHER',$url.'other/');
+
+// LIBS
+DEFINE('DIR_LIBS','libs/');
+// BOOTSTRAP
+DEFINE('DIR_BS','libs/bootstrap/');
+
+// RESOURCES
+DEFINE('DIR_RS','resources/');
+
+//Archivos necesarios
+require('models/gestionBD.php');
+require('models/pageModel.php');
+require('models/proyectoModel.php');
+require('models/dataModel.php');
+require('models/logModel.php');
+require('core/php/funciones.php');
+require('libs/view.php');
+require('libs/session/session.php');
+require('libs/controller/ControllerConf.php');
+require('libs/controller/controller.php');
+
+//Definición de Zona Horaria
+
+
+?>

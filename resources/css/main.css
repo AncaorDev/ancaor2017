@@ -1,0 +1,602 @@
+@import 'https://fonts.googleapis.com/css?family=Ubuntu';
+@import 'https://fonts.googleapis.com/css?family=PT+Sans:400,700';
+@import 'https://fonts.googleapis.com/css?family=Asap';
+
+@import url('https://fonts.googleapis.com/css?family=Baloo+Chettan');
+@import 'https://fonts.googleapis.com/css?family=Anton&subset=latin-ext';
+@import url('https://fonts.googleapis.com/css?family=Arima+Madurai');
+@import url('https://fonts.googleapis.com/css?family=Hammersmith+One')
+/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
+/*Cambiado con Visual Code*/
+
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+
+*, *::before, *::after, *:before, *:after {
+  /*para no tener problemas con el borde*/
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+}
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+/*
+======== FONDO BODY =========
+*/
+
+body {
+    background-image: url(../images/fondo.jpg);
+     font-family: 'Asap', sans-serif;
+}
+
+
+/*
+======== FIN - FONDO BODY =========
+*/
+
+
+/*
+======== CABECERA =========
+*/
+
+#cabecera-top {
+    
+}
+
+.cont-cabecera-top {
+    padding: 0;
+}
+.cont-cabecera-top > cont-img {
+    width: 100%;
+}
+.img-cabecera-top{
+    width: 100%;
+}
+
+
+/*
+======== FIN-CABECERA =========
+*/
+
+
+/*
+======== NAV =========
+*/
+#barra-nav {
+
+}
+.div-nav {
+
+}
+.navbar {
+    border-radius: 0 0 0 0;
+    margin-bottom: 0;
+}
+.navbar-default {
+    border:0px ;
+    border-color: white;
+}
+.navbar-ancaor {
+    background-color: rgb(44, 62, 80);
+    color: white;
+}
+.nav-cf {
+    /* padding: 0; */
+} 
+.navbar-default .navbar-brand{
+    color: white;
+}
+.navbar-default .navbar-brand:hover{
+    color: white;
+}
+.navbar-nav > li {
+   /* background-color:none;  */
+}
+.navbar-default .navbar-nav > li >a {
+   color:white;
+}
+.navbar-default .navbar-nav > li >a:hover {
+   color:white;
+   cursor: pointer;
+}
+
+#tabPages {
+    padding: 0px;
+}
+
+.x_panel { 
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+ul.bar_tabs>li.active a{
+    padding-left: 10px;
+    padding-right: 10px; 
+}
+ul.bar_tabs>li a {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+ul.bar_tabs>li {
+    margin-left: 4px;
+}
+.h2-none {
+    padding: 10px;
+}
+/*
+======== FIN - NAV =========
+*/
+
+/*
+======== BODY =========
+*/
+
+.header-body{
+    background-image: url(../images/panel.jpg);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    color: white;
+    background-size: cover;
+    /* background-attachment: fixed; */
+}
+
+.body-body {
+    background-color: black;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.bd-body{
+    background-color: black;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.box-body {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 50px; 
+    background-color: rgb(226, 226, 226);
+    border-radius: 10px 10px 10px 10px;
+    -webkit-box-shadow: inset -4px -5px 8px 0px rgba(78, 78, 85, 0.75);
+    -moz-box-shadow:    inset -4px -5px 8px 0px rgba(78, 78, 85, 0.75);
+    box-shadow:         inset -4px -5px 8px 0px rgba(78, 78, 85, 0.75);
+}
+
+.title-body{
+    /* font-family: 'Baloo Chettan', cursive; */
+    font-family: 'Hammersmith One', sans-serif;
+    font-weight: bolder;
+    color: rgb(173, 75, 68);
+}
+.btn-ancaor {
+    margin-top: 10px;
+    background-color: rgb(29, 161, 155);
+    padding: 10px;
+}
+.btn-ancaor:hover {
+    margin-top: 10px;
+    background-color: rgb(29, 161, 155);
+    padding: 10px;
+}
+
+@media (min-width: 720px) {
+   .body-body {
+    background-color: black;
+    color: white;
+    padding-top: 0;
+    }
+}
+
+/*
+======== FIN - BODY =========
+*/
+.cont-redes{
+    background-color: black;
+}
+.row-redes {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+}
+.header-redes{
+    width: 100%;
+    text-align: center;
+}
+.body-redes{
+    width: 100%;
+    text-align: center;
+}
+.div-ico-redes {
+    width: 33%;
+    text-align: center;
+    float: left;
+}
+.img-ico-redes {
+    width: 80%;
+    margin: 0 auto;
+    float: left;
+    border-radius: 50%;
+}
+
+.logo-foot{
+
+}
+.img-logo-foot {
+    width:15%;
+}
+.txt3 {
+    color: white;
+}
+.powered {
+    padding-top: 5px;
+    text-align: center;
+    border-top: 3px solid rgb(85, 98, 113);
+}
+
+@media (min-width: 720px) {
+    .cont-redes{
+    background-color: black;
+    }
+    .row-redes {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: center;
+        width: 15%;
+        margin: 0 auto;
+    }
+    .header-redes{
+        width: 100%;
+        text-align: center;
+    }
+    .body-redes{
+        width: 100%;
+        text-align: center;
+    }
+    .div-ico-redes {
+        width: 33%;
+        text-align: center;
+        float: left;
+    }
+    .img-ico-redes {
+        width: 80%;
+        margin: 0 auto;
+        float: left;
+        border-radius: 50%;
+    }
+
+    .logo-foot{
+
+    }
+    .img-logo-foot {
+        width:15%;
+    }
+    .txt3 {
+        color: white;
+    }
+    .powered {
+    
+    }
+}
+/*
+======== FOOTER =========
+*/
+.foot {
+
+}
+.row-foot{
+    padding-top:10px;
+    padding-bottom:40px;
+    /* background-color:rgb(44, 62, 80); */
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#102f4f+0,2c3c50+100 */
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#102f4f+74,2c3c50+100 */
+    background: rgb(44, 62, 70); /* Old browsers */
+    font-size: 12px;
+}
+.header-foot{
+    color: white;
+    text-align: center;
+}
+.header-foot-right{
+    color: white;
+    text-align: center;
+}
+.header-foot-left{
+    color: white;
+    text-align: center;
+}
+.header-foot-center{
+    color: white;
+    text-align: center;
+}
+.body-foot{
+    /* background-color:rgb(44, 62, 80); */
+    color: white;
+}
+.about-foot {
+    color: rgb(190, 190, 190);
+    cursor: pointer;
+}
+.about-foot:hover {
+    color: white;
+    text-decoration:none;
+}
+.nav-foot {
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+}
+.nav-foot cont-data-foot {
+    width: 100%;
+    text-align: center;
+     float: left;
+}
+.text-nav-foot{
+    margin: -5px auto;
+    float: left;
+    width: 22.5%;
+    color: white;
+    /* background-color: rgb(44, 62, 80); */
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.text-nav-foot:hover{
+    margin: -5px auto;
+    float: left;
+    width: 22.5%;
+    color: white;
+    background-color: rgb(55, 64, 68);
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-radius: 16px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.separador-nav-foot {
+    margin: 0 auto;
+    float: left;
+    width: 2%;
+    color: white;
+}
+.a-ancaor{
+    color:white;
+    text-decoration: none;
+}
+.a-ancaor:hover{
+    color:white;
+    text-decoration: none;
+}
+
+@media (min-width: 720px) {
+    .foot {
+
+    }
+    .row-foot{
+        padding-top:10px;
+        padding-bottom:40px;
+        /* background-color:rgb(44, 62, 80); */
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#102f4f+0,2c3c50+100 */
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#102f4f+74,2c3c50+100 */
+        background: rgb(44, 62, 70); /* Old browsers */
+        font-size: 12px;
+    }
+    .header-foot{
+        color: white;
+        text-align: center;
+    }
+    .header-foot-right{
+        color: white;
+        text-align: right;
+    }
+    .header-foot-left{
+        color: white;
+        text-align: left;
+    }
+    .header-foot-center{
+        color: white;
+        text-align: center;
+    }
+    .body-foot{
+        /* background-color:rgb(44, 62, 80); */
+        color: white;
+    }
+    .about-foot {
+        color: rgb(190, 190, 190);
+        cursor: pointer;
+    }
+    .about-foot:hover {
+        color: white;
+        text-decoration:none;
+    }
+    .nav-foot {
+        margin: 0 auto;
+        width: 50%;
+        text-align: center;
+    }
+    .nav-foot cont-data-foot {
+        width: 100%;
+        text-align: center;
+         float: left;
+    }
+    .text-nav-foot{
+        margin: -5px auto;
+        float: left;
+        width: 22.5%;
+        color: white;
+        /* background-color: rgb(44, 62, 80); */
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+
+    .text-nav-foot:hover{
+        margin: -5px auto;
+        float: left;
+        width: 22.5%;
+        color: white;
+        background-color: rgb(55, 64, 68);
+        padding-top: 4px;
+        padding-bottom: 4px;
+        border-radius: 16px;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .separador-nav-foot {
+        margin: 0 auto;
+        float: left;
+        width: 2%;
+        color: white;
+    }
+    .h1-footer {
+        margin-top: -5px;
+    }
+}
+/*
+======== FIN - FOOTER =========
+*/
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
